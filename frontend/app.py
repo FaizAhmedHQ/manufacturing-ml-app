@@ -65,7 +65,8 @@ with st.container():
             "Day_of_Week": Day_of_Week
         }
 
-        res = requests.post("http://127.0.0.1:8000/predict", json=payload)
+        res = requests.post("https://manufacturing-ml-app.onrender.com/predict", json=payload)
+
 
         if res.status_code == 200:
             result = res.json()["parts_per_hour"]
