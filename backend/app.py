@@ -5,7 +5,8 @@ import pandas as pd
 
 app = FastAPI()
 
-model = joblib.load("../model/manufacturing_model.pkl")
+model = joblib.load("model/manufacturing_model.pkl")
+
 
 class InputData(BaseModel):
     Injection_Temperature: float
